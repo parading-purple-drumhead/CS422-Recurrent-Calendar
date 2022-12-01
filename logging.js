@@ -186,15 +186,15 @@ function sendNetworkLog(
   info,
   state,
   version) {
-  var formid = "e/1FAIpQLSeRbv-yNYqAcz5oez5AGy-sWqRWmcQaIrjMLlZ0ybou9y2pMA";
+  var formid = "e/1FAIpQLSfdKPOEo3z667IKl_HTboWFBqso_Zwoyrz4dQEm_3Wp2ti4Ow";
   var data = {
-    "entry.1194399592": uid,
-    "entry.697135651": time,
-    "entry.841918187": name,
-    "entry.1812660943": target,
-    "entry.1621909563": info,
-    "entry.993354276": state,
-    "entry.1731365547": version
+    "entry.2130935436": uid,
+    "entry.209541199": time,
+    "entry.1936702529": name,
+    "entry.2029368682": target,
+    "entry.454076236": info,
+    "entry.1691816298": state,
+    "entry.534702218": version
   };
   var params = [];
   for (key in data) {

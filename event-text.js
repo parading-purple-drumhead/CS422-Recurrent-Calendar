@@ -215,5 +215,9 @@ function getEventText() {
 }
 
 function writeEventToScreen(eventString) {
-	$('#new-event-text').text(eventString);
+	$('#new-event-text').trigger('log', ['eventCreated', { 'what': 'Event created successfully' }])
+	$('#new-event-text').text(eventString)
+	$('.event-form').attr('disabled', true)
+	$('#create-event-button').hide()
+	$('#new-event-button').show()
 }

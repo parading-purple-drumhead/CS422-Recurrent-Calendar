@@ -1,7 +1,20 @@
 $(function () {
-    $(function () {
-        $("#event-name").focus();
-    });
+
+    $('.event-form').attr('disabled', true)
+
+    $('#new-event-button').on('click', () => {
+        $(':input')
+            .not(':button, :submit, :reset, :hidden')
+            .val('')
+            .prop('checked', false)
+            .prop('selected', false);
+        $('#new-event-text').text('')
+        $('.event-form').attr('disabled', false)
+        $('#event-name').focus()
+        $('#create-event-button').show()
+        $('#new-event-button').hide()
+        console.log($('#new-event-button').trigger('log', ['eventStarted', { 'what': 'Started creating event' }]));
+    })
 
     $("#event-end-date").prop("disabled", $("#event-start-date").val() ? false : true)
     startDate = ''

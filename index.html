@@ -32,12 +32,16 @@
     <div id="container">
       <div id="content">
         <div class="card col-lg-4">
-          <input id="event-name" class="title col-md-12" type="text"
-          placeholder="Enter Event Name..."' />
+          <input
+            id="event-name"
+            class="title col-md-12 event-form"
+            type="text"
+            placeholder="Enter Event Name..."
+          />
           <span class="text-danger" id="event-name-error"></span>
           <input
             id="event-location"
-            class="col-md-12"
+            class="col-md-12 event-form"
             type="text"
             placeholder="Add Event Location..."
           />
@@ -48,7 +52,11 @@
             <tr>
               <td class="time-detail-name">All-Day:</td>
               <td class="">
-                <input id="all-day-event-checkbox" type="checkbox" />
+                <input
+                  id="all-day-event-checkbox"
+                  class="event-form"
+                  type="checkbox"
+                />
               </td>
             </tr>
             <tr id="start-time-row">
@@ -57,6 +65,7 @@
                 <input
                   id="event-start-date"
                   type="text"
+                  class="event-form"
                   placeholder="yyyy/mm/dd HH:mm"
                 />
                 <span id="start-time-error" class="text-danger"></span>
@@ -68,6 +77,7 @@
                 <input
                   id="event-end-date"
                   type="text"
+                  class="event-form"
                   placeholder="yyyy/mm/dd HH:mm"
                 />
                 <span id="end-time-error" class="text-danger"></span>
@@ -82,7 +92,7 @@
             <tr>
               <td class="time-detail-name">Repeat:</td>
               <td class="">
-                <select id="recurrent-event-type-selector">
+                <select id="recurrent-event-type-selector" class="event-form">
                   <option value="none" selected="selected">None</option>
                   <option value="day">Every Day</option>
                   <option value="week">Every Week</option>
@@ -325,7 +335,15 @@
       </div>
 
       <div class="card col-lg-4">
-        <button id="create-event-button" class="btn btn-primary" type="button">
+        <button id="new-event-button" class="btn btn-primary" type="button">
+          Make New Event
+        </button>
+        <button
+          id="create-event-button"
+          class="btn btn-success"
+          type="button"
+          style="display: none;"
+        >
           Create Event
         </button>
       </div>
